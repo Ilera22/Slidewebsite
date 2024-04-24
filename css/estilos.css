@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+  }
+
+.cointainer{
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.Menu_Nav{
+display: flex;
+flex-direction: row;
+}
+
+.Nav_Bar{
+  width: 100%;
+  height: fit-content;
+  min-height: 60px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 0 36px;
+  background: rgb(00,00,40);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav__items{
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 5px;
+}
+
+.nav__items:last-child {
+  margin-right: 0px;
+  padding: 5px 0;
+}
+
+ 
+ /*  Inicio Segunda Barra de Navegacion   */
+
+.Nav_Bar_Icons{
+  width: 100%;
+  height: fit-content;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  background: rgb(00,00,40);
+}
+
+.cointainer_Nav2{
+width: 95%;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+  
+.Menu_Nav_Icons{
+  width: fit-content;
+  display: flex;
+  line-height: 40px;
+}
+
+
+.button_nav{
+  text-decoration: none;
+  padding: 5px 25px;
+  margin-top: 15px;
+}
+
+.button_nav:first-child{
+  text-decoration: none;
+  padding-left: 5%;
+  margin-top: 15px;
+}
+
+
+.btn{
+  height: 100px;
+  border: none;
+  background:transparent;
+}
+
+
+.LogIn_Nav{       /* lOGIN  Container   */
+  display: none; /* Cambiar a Flex para que se vea   */
+  flex-direction: row;
+  width: fit-content;
+  padding: 5px;
+  margin-top: 35px;   
+}
+
+
+.LogIn_Nav_item{       /* lOGIN INDIVIDUAL  */
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+.LogIn_Nav_item:last-child {
+  margin-right: 0px;
+}
+
+
+  /* Fin Segunda Barra de Navegacion   */
+
+
+
+/* Inicio Body   */
+  
+
+
+.Article_Container{   
+  margin-bottom: 50px;   
+  background-color: rgb(1, 3, 99);
+  width: 80%;
+  min-width: 500px;
+  height: 160px;
+}
+  
+.Article_IMG{
+  float: right;
+}
+
+.Article_TEXT{
+  color: white;
+  padding-left: 10px;
+}
+
+.text_item{
+  padding-top: 5px;
+}
+
+.SideBar{
+  float: right;
+  width: 30%;
+}
+
+
+.SideBar_Text{
+  font-weight:bold;
+  text-align: center;
+}
+
+
+
+/* Fin Body   */
+
+
+
+/*  Footer   */
+
+.footer {
+  padding: 30px 30px 20px 30px;
+  background-color: rgb(00,00,40);
+  border-top: 1px solid #e5e5e5; 
+}
+
+.cointainer_footer{
+  width: 95%;
+  height: fit-content;
+  margin: 0 auto;
+
+}
+
+.A{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+
+.Name_Slogan{
+ color: white;
+}
+
+
+.Menu_Nav_f{
+  display: flex;
+  flex-direction: row;
+  }
+  
+
+  
+  .nav__items_f{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 5px;
+  }
+  
+
+  .legal {
+    padding-top: 10PX;
+    display: flex;
+    color: rgb(95, 95, 95);
+  }
