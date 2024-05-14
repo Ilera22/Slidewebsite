@@ -1,24 +1,22 @@
+/* Reset y configuración básica para todos los elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
+/* Estilos básicos para el cuerpo del documento */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-
-
+/* Estilización del encabezado con imagen de portada */
 .header .cover {
   position: relative;
   height: 80vh;
@@ -50,6 +48,7 @@ html, body {
   font-size: 1.5em;
 }
 
+/* Estilos para la navegación fija en la parte superior */
 .navigation {
   position: sticky;
   top: 0;
@@ -80,26 +79,23 @@ html, body {
   border-bottom: 2px solid #000;
 }
 
-.main {
-  padding: 2em;
-}
-
+/* Estilos para las secciones del contenido principal */
 .section {
   padding: 3em 2em;
-  text-align: center;
-  min-height: 100vh; /* Viewport Height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  }
-  
-  .section.is-visible {
-    opacity: 1;
-  }
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(-50px); /* Posición inicial para la animación */
+  transition: all 0.6s ease-out; /* Transición suave para la animación */
+}
+
+.section.is-visible {
+  opacity: 1;
+  transform: translateY(0); /* Posición final de la animación */
+}
 
 .section h2 {
   font-size: 2.5em;

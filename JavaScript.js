@@ -11,18 +11,20 @@ document.querySelectorAll('.navigation a').forEach(anchor => {
 });
 
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-    } else {
-      entry.target.classList.remove('is-visible');
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible');
+      }
+    });
+  }, {
+    threshold: 0.5 // Ajusta esto según tus necesidades para cambiar cuándo ocurre la animación
   });
-}, {
-  threshold: 0.5 // 50% de la sección debe estar visible
-});
 
-document.querySelectorAll('.section').forEach(section => {
-  observer.observe(section);
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
 });
