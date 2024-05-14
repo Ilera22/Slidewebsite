@@ -12,19 +12,22 @@ document.querySelectorAll('.navigation a').forEach(anchor => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  const observer = new IntersectionObserver((entries) => {
+  // Crear un observador con IntersectionObserver
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
+      if (entry.isIntersecting) { // Verificar si la sección está visible
+        entry.target.classList.add('is-visible'); // Añadir clase para animación
+        observer.unobserve(entry.target); // Opcional: Dejar de observar después de animar
       }
     });
   }, {
-    threshold: 0.5 // Ajusta esto según tus necesidades para cambiar cuándo ocurre la animación
+    rootMargin: '0px',
+    threshold: 0.5 // Ajusta esto para cambiar cuándo se activa la animación
   });
 
+  // Aplicar el observador a cada sección
   document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
   });
 });
+
