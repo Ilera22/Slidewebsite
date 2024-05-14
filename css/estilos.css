@@ -7,3 +7,15 @@
   align-items: center;
   justify-content: center;
 }
+
+#section1 {
+  background-color: blueviolet;
+}
+
+#section2 {
+  background-color: yellow;
+}
+
+#section3 {
+  background-color: teal;
+}
