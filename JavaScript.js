@@ -1,23 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll('.section');
+gsap.registerPlugin(ScrollTrigger);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        let previousSection = entry.target.previousElementSibling;
-        // Asegurar que la animación se aplique cuando la sección previa casi ha salido de la vista
-        if (previousSection && !previousSection.classList.contains('is-visible')) {
-          previousSection.classList.add('is-visible');
-        }
-        entry.target.classList.add('is-visible');
+gsap.utils.toArray('.section').forEach(section => {
+  gsap.fromTo(section, 
+    { y: '100vh', opacity: 0 }, // Estado inicial fuera de la vista
+    {
+      y: '0', // Termina en su posición normal
+      opacity: 1, // Completamente visible
+      scrollTrigger: {
+        trigger: section,
+        start: "top bottom", // Inicia la animación cuando la parte superior del trigger está en la parte inferior de la ventana
+        end: "bottom top", // Termina la animación cuando la parte inferior del trigger está en la parte superior de la ventana
+        scrub: 1, // Suaviza la animación con el movimiento de scroll
       }
-    });
-  }, {
-    rootMargin: "0px",
-    threshold: 0.05 // Un umbral más pequeño para empezar la animación más temprano
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+    }
+  );
 });
