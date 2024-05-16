@@ -1,17 +1,18 @@
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.scroll-animation');
 
-gsap.utils.toArray('.section').forEach(section => {
-  gsap.fromTo(section, 
-    { y: '100vh', opacity: 0 }, // Estado inicial fuera de la vista
-    {
-      y: '0', // Termina en su posición normal
-      opacity: 1, // Completamente visible
-      scrollTrigger: {
-        trigger: section,
-        start: "top bottom", // Inicia la animación cuando la parte superior del trigger está en la parte inferior de la ventana
-        end: "bottom top", // Termina la animación cuando la parte inferior del trigger está en la parte superior de la ventana
-        scrub: 1, // Suaviza la animación con el movimiento de scroll
+  const checkVisibility = () => {
+    const triggerTop = window.innerHeight / 5 * 4; // Punto de activación ajustado
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      if (elementTop < triggerTop) {
+        element.classList.remove('visible'); // Retira la clase cuando el elemento sube
+      } else {
+        element.classList.add('visible'); // Añade la clase cuando el elemento entra
       }
-    }
-  );
+    });
+  };
+
+  window.addEventListener('scroll', checkVisibility);
+  checkVisibility(); // Inicializar al cargar
 });

@@ -1,21 +1,85 @@
+body {
+  margin: 0;
+}
 
-/* Estilos para las secciones del contenido principal */
+.header, .section {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+.header .title, .section h2, .section p {
+  position: relative; /* Asegura que el texto se muestre encima del fondo */
+  z-index: 2;
+}
+
+
 .section {
-  height: 100vh;
-  width: 100%;
+  position: relative;
+  min-height: 100vh; /* Altura ajustable según tus necesidades */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  background-image: url('https://via.placeholder.com/1500x800');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Efecto parallax */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section h2 {
+  font-size: 3em;
+}
+
+.section p {
+  font-size: 1.5em;
+  max-width: 600px; /* Ajustable */
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #section1 {
-  background-color: blueviolet;
+  background-image: url('https://cdn.shopify.com/s/files/1/3026/6974/files/happy-alpacas-landscape_1024x1024.jpg?v=1532619630');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #section2 {
-  background-color: yellow;
+  background-image: url('https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature-825x465.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #section3 {
-  background-color: teal;
+  background-image: url('https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
