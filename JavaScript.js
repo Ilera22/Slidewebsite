@@ -9,7 +9,7 @@ function sendDataToServer(survey) {
 }
 
 // Carga el JSON de la encuesta desde un archivo externo y lo inicializa
-fetch('/survey.json')
+fetch('survey.json')
     .then(response => response.json())
     .then(json => {
         var survey = new Survey.Model(json);
