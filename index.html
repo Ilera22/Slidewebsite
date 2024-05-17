@@ -1,30 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UFT-8">
-    <meta name="VIEWPORT" content="wide=device-width,  initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SlideWebsite</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<!-- SurveyJS CSS -->
+<link href="https://surveyjs.azureedge.net/1.9.31/survey.css" type="text/css" rel="stylesheet" />
+<!-- SurveyJS Library -->
+<script src="https://surveyjs.azureedge.net/1.9.31/survey.jquery.min.js"></script>
+
 </head>
-
 <body>
-  <main>
-    <section id="section1" class="section">
-      <h2 class="scroll-animation">Section 1 Title</h2>
-      <p class="scroll-animation">Content of Section 1...</p>
-    </section>
-    
-    
-    <section id="section2" class="section">
-      <h2 class="scroll-animation">Section 2 Title</h2>
-      <p class="scroll-animation">Content of Section 1...</p>
-    </section>
-    
-    <section id="section3" class="section">
-      <h2 class="scroll-animation">Section 3 Title</h2>
-      <p class="scroll-animation">Content of Section 1...</p>
-    </section>
+  <header class="header cover">
+    <div class="title scroll-animation" data-speed="0.2">
+      <h1>The Story Title</h1>
+      <p>The subtitle or description goes here.</p>
+    </div>
+  </header>
 
-    <script src="JavaScript.js"></script>
+  <nav class="navigation">
+    <ul>
+      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#section3">Section 3</a></li>
+      <li><a href="#section4">Formulario</a></li>
+    </ul>
+  </nav>
+
+  <section id="section1" class="section">
+    <div class="section-info" data-aos="fade-up" data-aos-duration="500">
+      <h2>Title</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi asperiores</p>
+      <button><a href="#section4">Formulario</a></button>
+    </div>
+  </section>
+  
+  <section id="section2" class="section">
+    <div class="section-info" data-aos="fade-up" data-aos-duration="1500">
+      <h2>Title</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi asperiores</p>
+    </div>
+  </section>
+  
+  <section id="section3" class="section">
+    <div class="section-info" data-aos="fade-up" data-aos-duration="1500">
+      <h2>Title</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi asperiores</p>
+    </div>
+  </section>
+
+  <section id="section4" class="section">
+    <div id="surveyElement"></div>
+    <div id="surveyResult"></div>
+  </section>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <script src="JavaScript.js"></script>
+
+
+
+  
 </body>
 </html>
