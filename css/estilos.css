@@ -13,31 +13,6 @@ body {
   color: #333;
 }
 
-.header .cover {
-  position: relative;
-  height: 80vh;
-  overflow: hidden;
-  text-align: center;
-  background-image: url('https://via.placeholder.com/1500x800');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.header .title {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.header .title h1 {
-  font-size: 3em;
-  margin-bottom: 0.3em;
-}
-
-.header .title p {
-  font-size: 1.5em;
-}
 
 .navigation {
   position: sticky;
