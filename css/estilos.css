@@ -13,31 +13,6 @@ body {
   color: #333;
 }
 
-.header .cover {
-  position: relative;
-  height: 80vh;
-  overflow: hidden;
-  text-align: center;
-  background-image: url('https://via.placeholder.com/1500x800');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.header .title {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.header .title h1 {
-  font-size: 3em;
-  margin-bottom: 0.3em;
-}
-
-.header .title p {
-  font-size: 1.5em;
-}
 
 .navigation {
   position: sticky;
@@ -88,7 +63,7 @@ body {
 
 
 #section1 {
-  background-image: url('https://cdn.shopify.com/s/files/1/3026/6974/files/happy-alpacas-landscape_1024x1024.jpg?v=1532619630');
+  background-image: url('../Assets/Info_Tallao1.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,7 +71,7 @@ body {
 }
 
 #section2 {
-  background-image: url('https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature-825x465.jpg');
+  background-image: url('../Assets/Info_Tallao2.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,7 +79,7 @@ body {
 }
 
 #section3 {
-  background-image: url('https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url('../Assets/Info_Tallao3.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
