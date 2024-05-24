@@ -110,3 +110,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Estilos para pantallas de móviles */
+@media only screen and (max-width: 767px) {
+  #section1 {
+    background-image: url('/Assets/Plantilla_Cel1.png');
+  }
+}
