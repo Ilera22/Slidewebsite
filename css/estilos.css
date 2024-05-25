@@ -99,4 +99,48 @@ iframe {
       font-size: 1em;
   }
 }
-</style>
+
+
+#section1 {
+  background-image: url('../Assets/Info_Tallao1.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section2 {
+  background-image: url('../Assets/Info_Tallao2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section3 {
+  background-image: url('../Assets/Info_Tallao3.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para pantallas de móviles */
+@media only screen and (max-width: 767px) {
+  #section1 {
+    background-image: url('../Assets/Plantilla_Cel1.png');
+    background-attachment: fill;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #section2 {
+    background-image: url('../Assets/Plantilla_Cel2.png');
+    background-attachment: fill;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #section3 {
+    background-image: url('../Assets/Plantilla_Cel3.png');
+    background-attachment: fill;
+  }
+}
