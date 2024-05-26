@@ -1,40 +1,53 @@
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a1b9a, #ff8e53);
+  color: white;
+  scroll-behavior: smooth;
 }
 
 header {
-  background: #6a0dad; /* Morado */
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  gap: 15px;
 }
 
 nav a {
-  color: #fff;
-  padding: 10px 20px;
+  color: white;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-  color: #ff8c00; /* Naranja */
+  color: #ff8e53;
 }
 
-.hero-section {
+.hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 100px 20px;
   background: linear-gradient(135deg, #6a0dad, #ff8c00);
-  color: #fff;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
 }
 
 .animated-button {
-  background-color: #6a0dad; /* Morado */
+  background-color: #6a0dad;
   color: white;
   padding: 15px 25px;
   border: none;
@@ -44,40 +57,84 @@ nav a:hover {
 
 .animated-button:hover {
   transform: scale(1.1);
-  background-color: #ff8c00; /* Naranja */
+  background-color: #ff8c00;
+}
+
+.form-button {
+  background-color: #ff8e53;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .section {
-  padding: 20px;
-  background-color: #fff;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-
-.parallax {
-  background-image: url('../Assets/Info_Tallao1.png');
-  min-height: 400px; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.section {
+  padding: 50px 20px;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#section1, #section2, #section3 {
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#section1 {
+  background-image: url('../Assets/Info_Tallao1.png');
+}
+
+#section2 {
+  background-image: url('../Assets/Info_Tallao2.png');
+}
+
+#section3 {
+  background-image: url('../Assets/Info_Tallao3.png');
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 20px;
+}
+
+iframe {
+  width: 94%;
+  margin: 1%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .gallery img, iframe {
+      width: 48%;
+      margin: 1%;
+  }
+  .steps div {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img, iframe {
+      width: 98%;
+      margin: 1%;
+  }
+  .hero h1 {
+      font-size: 2em;
+  }
+  .hero p, .cta-button {
+      font-size: 1em;
+  }
 }
