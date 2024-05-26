@@ -1,158 +1,83 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #6a1b9a, #ff8e53);
-  color: white;
-  scroll-behavior: smooth;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
+
 header {
+  background: #6a0dad; /* Morado */
+  padding: 10px 0;
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
 }
+
 nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-}
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-.hero h1 {
-  font-size: 3em;
-}
-.hero p {
-  font-size: 1.2em;
-}
-.cta-button {
-  background-color: #ff8e53;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-}
-.form-button {
-  background-color: #ff8e53;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1em;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  transition: color 0.3s ease-in-out;
 }
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
+
+nav a:hover {
+  color: #ff8c00; /* Naranja */
 }
-.gallery img {
-  width: 23%;
-  margin: 1%;
-  border-radius: 10px;
-}
-.steps {
+
+.hero-section {
   text-align: center;
   padding: 50px 20px;
+  background: linear-gradient(135deg, #6a0dad, #ff8c00);
+  color: #fff;
 }
-.steps div {
-  display: inline-block;
-  width: 30%;
-  padding: 20px;
+
+.animated-button {
+  background-color: #6a0dad; /* Morado */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  padding: 20px;
-}
-iframe {
-  width: 94%;
-  margin: 1%;
-  border-radius: 10px;
-}
-@media (max-width: 768px) {
-  .gallery img, iframe {
-      width: 48%;
-      margin: 1%;
-  }
-  .steps div {
-      width: 90%;
-      margin-bottom: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .gallery img, iframe {
-      width: 98%;
-      margin: 1%;
-  }
-  .hero h1 {
-      font-size: 2em;
-  }
-  .hero p, .cta-button {
-      font-size: 1em;
-  }
+
+.animated-button:hover {
+  transform: scale(1.1);
+  background-color: #ff8c00; /* Naranja */
 }
 
 .section {
-  position: relative;
-  height: 100vh; /* Ajusta la altura según sea necesario */
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: center;
-  color: white;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 
-#section1 {
+.parallax {
   background-image: url('../Assets/Info_Tallao1.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #6a1b9a;
-}
-
-#section2 {
-  background-image: url('../Assets/Info_Tallao2.png');
-  background-attachment: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#section3 {
-  background-image: url('../Assets/Info_Tallao3.png');
+  min-height: 400px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Estilos para pantallas de móviles */
-@media only screen and (max-width: 767px) {
-  #section1 {
-    background-image: url('../Assets/Plantilla_Cel1.png');
-    background-attachment: fill;
-  }
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-@media only screen and (max-width: 767px) {
-  #section2 {
-    background-image: url('../Assets/Plantilla_Cel2.png');
-    background-attachment: fill;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #section3 {
-    background-image: url('../Assets/Plantilla_Cel3.png');
-    background-attachment: fill;
-  }
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
